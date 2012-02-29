@@ -1,0 +1,58 @@
+#CSON
+
+$env: 'debug'
+$autorun: #{String}
+$export: #{null|String|Object}
+$define: #{Object}
+  $(PROJECT_DIR)
+  $(PROJECT_NAME)
+  $(CURRENT_DIR)
+  $(ARG_0)
+  $(ARG_1)
+  $(ARG_2)
+  ...
+  $(ARG_N)
+  $(ENV)
+  $(SCOPE_NAME)
+$default: #{Object}
+$include: #{String|Array|Object?}
+$plugin: #{String|Array}
+
+scope:
+  $define: #{Object}
+  $default: #{Object}
+  step:
+    $type: #{String}
+    
+_hiddenScope: 
+  var: '$(VAR_NAME)'
+  cmd1: '$json(...)'
+  cmd2: '$js(...)'
+  cmd3: '$regexp(...)'
+  
+nb
+nb [scope.*]task
+    
+    
+
+_common:
+
+  cson:
+    $type: 'cson'
+    src: 'package.cson'
+    dst: 'package.json'
+
+  
+  build:
+    $type: 'coffee'
+    src: 'src'
+    dst: 'lib'
+    opt: {bare: yes}
+    
+debug:
+  build:
+    $default
+      
+    cson:
+      $type: 'call'
+      node: '_common.cson'

@@ -1,0 +1,9 @@
+#CSON
+
+$plugin:
+	$type: 'plugin'
+	plugin: '../jslink.nbplug.js'
+
+link:
+	$type: 'jslink'
+	src: 'main.js'
