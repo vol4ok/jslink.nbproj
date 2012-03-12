@@ -1,0 +1,150 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/usr/local/bin/npm',
+verbose cli   'install',
+verbose cli   '/Users/Andrew/Sites/projects/nbuild/jslink.nbproj' ]
+info using npm@1.1.1
+info using node@v0.6.11
+verbose /usr/local/bin/node node symlink
+verbose config file /Users/Andrew/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/package.json
+verbose loadDefaults jslink.nbplug@0.0.2
+verbose where, deps [ '/Users/Andrew/Sites/projects/nbuild/jslink.nbproj',
+verbose where, deps   [ 'colors',
+verbose where, deps     'underscore',
+verbose where, deps     'hogan.js',
+verbose where, deps     'uglify-js',
+verbose where, deps     'fs.walker',
+verbose where, deps     'path.filter',
+verbose where, deps     'fs.utils',
+verbose where, deps     'coffee-script' ] ]
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/package.json
+info preinstall jslink.nbplug@0.0.2
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/coffee-script/package.json
+verbose loadDefaults coffee-script@1.2.0
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/colors/package.json
+verbose loadDefaults colors@0.6.0-1
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/fs.utils/package.json
+verbose loadDefaults fs.utils@0.0.2
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/fs.walker/package.json
+verbose loadDefaults fs.walker@0.0.1
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/hogan.js/package.json
+verbose loadDefaults hogan.js@1.0.5-dev
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/path.filter/package.json
+verbose loadDefaults path.filter@0.0.1
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/stylus/package.json
+verbose loadDefaults stylus@0.24.0
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/uglify-js/package.json
+verbose loadDefaults uglify-js@1.2.5
+verbose caching /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/underscore/package.json
+verbose loadDefaults underscore@1.3.1
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/coffee-script/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/colors/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/fs.utils/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/fs.walker/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/hogan.js/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/path.filter/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/stylus/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/uglify-js/package.json
+verbose from cache /Users/Andrew/Sites/projects/nbuild/jslink.nbproj/node_modules/underscore/package.json
+verbose cache add [ 'path.filter@git://github.com/vol4ok/path.filter.git', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'path.filter@git://github.com/vol4ok/path.filter.git',
+silly cache add: name, spec, args   [ 'path.filter@git://github.com/vol4ok/path.filter.git', null ] ]
+verbose parsed url { pathname: 'path.filter@git://github.com/vol4ok/path.filter.git',
+verbose parsed url   path: 'path.filter@git://github.com/vol4ok/path.filter.git',
+verbose parsed url   href: 'path.filter@git://github.com/vol4ok/path.filter.git' }
+silly cache add: name, spec, args [ 'path.filter',
+silly cache add: name, spec, args   'git://github.com/vol4ok/path.filter.git',
+silly cache add: name, spec, args   [ 'path.filter', 'git://github.com/vol4ok/path.filter.git' ] ]
+verbose parsed url { protocol: 'git:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'git://github.com/vol4ok/path.filter.git',
+verbose parsed url   pathname: '/vol4ok/path.filter.git',
+verbose parsed url   path: '/vol4ok/path.filter.git' }
+verbose addRemoteGit [ 'git://github.com/vol4ok/path.filter.git', 'master' ]
+verbose cache add [ 'fs.utils@git://github.com/vol4ok/fs.utils.git', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'fs.utils@git://github.com/vol4ok/fs.utils.git',
+silly cache add: name, spec, args   [ 'fs.utils@git://github.com/vol4ok/fs.utils.git', null ] ]
+verbose parsed url { pathname: 'fs.utils@git://github.com/vol4ok/fs.utils.git',
+verbose parsed url   path: 'fs.utils@git://github.com/vol4ok/fs.utils.git',
+verbose parsed url   href: 'fs.utils@git://github.com/vol4ok/fs.utils.git' }
+silly cache add: name, spec, args [ 'fs.utils',
+silly cache add: name, spec, args   'git://github.com/vol4ok/fs.utils.git',
+silly cache add: name, spec, args   [ 'fs.utils', 'git://github.com/vol4ok/fs.utils.git' ] ]
+verbose parsed url { protocol: 'git:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'git://github.com/vol4ok/fs.utils.git',
+verbose parsed url   pathname: '/vol4ok/fs.utils.git',
+verbose parsed url   path: '/vol4ok/fs.utils.git' }
+verbose addRemoteGit [ 'git://github.com/vol4ok/fs.utils.git', 'master' ]
+verbose cache add [ 'fs.walker@git://github.com/vol4ok/fs.walker.git', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'fs.walker@git://github.com/vol4ok/fs.walker.git',
+silly cache add: name, spec, args   [ 'fs.walker@git://github.com/vol4ok/fs.walker.git', null ] ]
+verbose parsed url { pathname: 'fs.walker@git://github.com/vol4ok/fs.walker.git',
+verbose parsed url   path: 'fs.walker@git://github.com/vol4ok/fs.walker.git',
+verbose parsed url   href: 'fs.walker@git://github.com/vol4ok/fs.walker.git' }
+silly cache add: name, spec, args [ 'fs.walker',
+silly cache add: name, spec, args   'git://github.com/vol4ok/fs.walker.git',
+silly cache add: name, spec, args   [ 'fs.walker', 'git://github.com/vol4ok/fs.walker.git' ] ]
+verbose parsed url { protocol: 'git:',
+verbose parsed url   slashes: true,
+verbose parsed url   host: 'github.com',
+verbose parsed url   hostname: 'github.com',
+verbose parsed url   href: 'git://github.com/vol4ok/fs.walker.git',
+verbose parsed url   pathname: '/vol4ok/fs.walker.git',
+verbose parsed url   path: '/vol4ok/fs.walker.git' }
+verbose addRemoteGit [ 'git://github.com/vol4ok/fs.walker.git', 'master' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289'
+verbose mkdir done: /var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289 755
+silly exec git "clone" "git://github.com/vol4ok/path.filter.git" "/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.5823295505251735"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'git://github.com/vol4ok/path.filter.git',
+silly spawning     '/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.5823295505251735' ],
+silly spawning   null ]
+silly exec git "clone" "git://github.com/vol4ok/fs.utils.git" "/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.25989245320670307"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'git://github.com/vol4ok/fs.utils.git',
+silly spawning     '/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.25989245320670307' ],
+silly spawning   null ]
+silly exec git "clone" "git://github.com/vol4ok/fs.walker.git" "/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.7249296237714589"
+silly spawning [ 'git',
+silly spawning   [ 'clone',
+silly spawning     'git://github.com/vol4ok/fs.walker.git',
+silly spawning     '/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.7249296237714589' ],
+silly spawning   null ]
+verbose already installed in /Users/Andrew/Sites/projects/nbuild/jslink.nbproj skipping coffee-script@>=1.2.0
+verbose already installed in /Users/Andrew/Sites/projects/nbuild/jslink.nbproj skipping colors@>=0.5
+verbose already installed in /Users/Andrew/Sites/projects/nbuild/jslink.nbproj skipping underscore@>=1.2.0
+verbose already installed in /Users/Andrew/Sites/projects/nbuild/jslink.nbproj skipping hogan.js@>=1.0.0
+verbose already installed in /Users/Andrew/Sites/projects/nbuild/jslink.nbproj skipping uglify-js@>=1.2.5
+ERR! git clone git://github.com/vol4ok/path.filter.git Cloning into /var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.5823295505251735...
+ERR! git clone git://github.com/vol4ok/path.filter.git fatal: The remote end hung up unexpectedly
+ERR! Error: `git "clone" "git://github.com/vol4ok/path.filter.git" "/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.5823295505251735"` failed with 128
+ERR!     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/exec.js:49:20)
+ERR!     at ChildProcess.emit (events.js:70:17)
+ERR!     at maybeExit (child_process.js:361:16)
+ERR!     at Process.onexit (child_process.js:397:5)
+ERR! You may report this log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 11.3.0
+ERR! command "node" "/usr/local/bin/npm" "install" "/Users/Andrew/Sites/projects/nbuild/jslink.nbproj"
+ERR! cwd /Users/Andrew/Sites/projects/nbuild/jslink.nbproj
+ERR! node -v v0.6.11
+ERR! npm -v 1.1.1
+ERR! message `git "clone" "git://github.com/vol4ok/path.filter.git" "/var/folders/d1/443vcrsn2y9c38mds6yq78hm0000gn/T/npm-1330538852289/1330538852289-0.5823295505251735"` failed with 128
+verbose exit [ 1, true ]

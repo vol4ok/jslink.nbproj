@@ -1,14 +1,11 @@
-module 'ui.module'
-include 'underscore'
+module 'main'
 include 'jquery'
-include 'style.styl'
+include 'underscore'
 
-data = __template 'test/index.html'
+data = __template 'build/index.html'
 
 
 Module1 = require "sm/"+"module"
-
-console.log __AUTHOR__, __VERSION__ if __DEBUG__
 
 f = () -> console.log "ololo"
 
@@ -17,6 +14,6 @@ class ClassA
   constructor: ->
     @temp = require "sm/module"
   method1: ->
-    @Tmpl = __template "test/index.mu"
+    @Tmpl = __template "build/index.mu"
     
 exports extends {ClassA}

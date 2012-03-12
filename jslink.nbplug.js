@@ -78,6 +78,10 @@ obj2ast = function(obj) {
   return ["block"];
 };
 
+exports.initialize = function(builder) {
+  return new JsLinker(builder);
+};
+
 JsLinker = (function() {
 
   JsLinker.prototype.defaults = {
@@ -92,8 +96,8 @@ JsLinker = (function() {
     fileExts: ['js']
   };
 
-  function JsLinker(options) {
-    if (options == null) options = {};
+  function JsLinker(builder) {
+    this.builder = builder;
     jsp.set_logger(function(msg) {
       return console.log(("Parser: " + msg).yellow);
     });
@@ -136,6 +140,7 @@ JsLinker = (function() {
 
   JsLinker.prototype.link = function(infile, outfile) {
     var ast, code, moduleNs, modules, opt, self, walk;
+    console.log(("link " + infile + " -> " + outfile).green);
     code = fs.readFileSync(infile, 'utf-8');
     ast = jsp.parse(code);
     walk = this.walker.walk;

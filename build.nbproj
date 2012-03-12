@@ -1,58 +1,32 @@
 #CSON
 
-$env: 'debug'
-$autorun: #{String}
-$export: #{null|String|Object}
-$define: #{Object}
-  $(PROJECT_DIR)
-  $(PROJECT_NAME)
-  $(CURRENT_DIR)
-  $(ARG_0)
-  $(ARG_1)
-  $(ARG_2)
-  ...
-  $(ARG_N)
-  $(ENV)
-  $(SCOPE_NAME)
-$default: #{Object}
-$include: #{String|Array|Object?}
-$plugin: #{String|Array}
+$plugin:
+  $type: 'plugin'
+  plugins: [ 'exec.nbplug', 'coffee.nbplug' ]
 
-scope:
-  $define: #{Object}
-  $default: #{Object}
-  step:
-    $type: #{String}
-    
-_hiddenScope: 
-  var: '$(VAR_NAME)'
-  cmd1: '$json(...)'
-  cmd2: '$js(...)'
-  cmd3: '$regexp(...)'
-  
-nb
-nb [scope.*]task
-    
-    
-
-_common:
-
+build:
   cson:
-    $type: 'cson'
-    src: 'package.cson'
-    dst: 'package.json'
+    $type: "exec"
+    exec: [ "cson package.cson" ]
 
-  
-  build:
-    $type: 'coffee'
-    src: 'src'
-    dst: 'lib'
-    opt: {bare: yes}
+  coffee:
+    $type: "coffee"
+    src: "jslink.nbplug.coffee"
+    coffeeOptions:
+      bare: yes
+
+install:
+  step1:
+    $type: 'exec'
+    "change-dir": "/usr/local/lib/node_modules/nbuild"
+    exec: [ "npm uninstall jslink.nbplug" ]
+  step2:
+    $type: 'exec'
+    "change-dir": "/usr/local/lib/node_modules/nbuild"
+    exec: [ "npm install $(PROJECT_DIR)" ]
     
-debug:
-  build:
-    $default
-      
-    cson:
-      $type: 'call'
-      node: '_common.cson'
+
+# deploy:
+#   uploadToGithub:
+#     $type: 'exec'
+#     exec: [ "git commit -a -m autoupload-`date +'%d.%m.%Y-%H:%M:%S'`" ]

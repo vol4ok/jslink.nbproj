@@ -50,6 +50,9 @@ obj2ast = (obj) ->
         return [ 'object', list ]
   return [ "block" ]
 
+exports.initialize = (builder) -> 
+  new JsLinker(builder)
+
 class JsLinker
   defaults: 
     src: []
@@ -62,7 +65,7 @@ class JsLinker
     defines: {}
     fileExts: [ 'js' ]
         
-  constructor: (options = {}) ->
+  constructor: (@builder) ->
     jsp.set_logger (msg) -> console.log "Parser: #{msg}".yellow
     pro.set_logger (msg) -> console.log "Process: #{msg}".yellow
     @walker = pro.ast_walker()
@@ -88,6 +91,7 @@ class JsLinker
         .walk(target)
 
   link: (infile, outfile) ->
+    console.log "link #{infile} -> #{outfile}".green
     code = fs.readFileSync(infile, 'utf-8')
     ast = jsp.parse(code)
     walk = @walker.walk

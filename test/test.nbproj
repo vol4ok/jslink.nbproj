@@ -2,8 +2,14 @@
 
 $plugin:
 	$type: 'plugin'
-	plugin: '../jslink.nbplug.js'
+	plugins: [ 'coffee.nbplug', 'jslink.nbplug']
+
+compile:
+	$type: 'coffee'
+	src: 'src'
+	dst: 'build'
 
 link:
 	$type: 'jslink'
-	src: 'main.js'
+	src: 'build'
+	compress: no
